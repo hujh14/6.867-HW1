@@ -1,0 +1,109 @@
+\documentclass[a4paper,twoside]{article}
+
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{calc}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage{pslatex}
+\usepackage{apalike}
+\usepackage{SCITEPRESS}
+\usepackage[small]{caption}
+
+\subfigtopskip=0pt
+\subfigcapskip=0pt
+\subfigbottomskip=0pt
+
+\begin{document}
+
+\title{6.867 Machine Learning  \subtitle{Homework 1} }
+
+% **************************************************************************************************
+ % Problem 1
+% **************************************************************************************************
+
+\section{\uppercase{Implementing Gradient Descent}}
+
+\noindent Gradient descent is an iterative procedure for find a vector that minimize an objective function. Typically, the vector is our parameters and the objective function is the cost function. In each iteration, we find the gradient of the objective function evaluated at the vector and update the vector in the direction of the negative gradient.
+
+\subsection{Basic Gradient Descent}
+
+\noindent To demonstrate the gradient descent algorithm, we will begin by finding the minimum of two well defined functions with closed form derivatives shown below.
+
+\medskip
+\noindent Negative Gaussian
+\begin{equation}
+f(x) = - \frac{1}{\sqrt{(2\pi)^n |\Sigma|}} exp[-\frac{1}{2} (x-u)^T\Sigma^{-1}(x-u)]
+\end{equation}
+\begin{equation}
+\frac{\partial f(x)}{\partial x} = -f(x) \Sigma^{-1} (x-u)
+\end{equation}
+
+
+\noindent Quadratic Bowl
+\begin{equation}
+f(x) = \frac{1}{2} x^T A x - x^T b
+\end{equation}
+\begin{equation}
+\frac{\partial f(x)}{\partial x} = Ax - b
+\end{equation}
+How does starting guess affect things?
+
+Graphs of step size vs gradient norm over time.
+Both gaussian and quad bowl.
+
+Convergence criterion affects accuracy of result.
+
+\subsection{Central Difference Approximation for Gradient}
+
+\subsection{Batch vs. Stochastic Gradient Descent}
+
+
+% **************************************************************************************************
+ % Problem 2
+% **************************************************************************************************
+
+\section{\uppercase{Linear Basis Function Regression}}
+
+You can write stuff here to but don't have to.
+
+\subsection{Closed Form Solution}
+
+\subsection{Gradient Descent Objective Functions}
+
+Write functions to compute SSE and derivative.
+
+\subsection{Batch vs Stochastic Gradient Descent}
+
+Compare!
+
+\subsection{Cosine Basis Functions}
+
+Shtuff.
+
+% **************************************************************************************************
+ % Problem 3
+% **************************************************************************************************
+
+\section{\uppercase{Ridge Regression}}
+
+\subsection{Closed Form Solution}
+
+\subsection{Results?}
+
+% **************************************************************************************************
+ % Problem 4
+% **************************************************************************************************
+
+\section{\uppercase{Sparsity and LASSO}}
+
+\subsection{Lasso}
+
+
+
+\vfill
+\end{document}
+
