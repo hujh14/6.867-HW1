@@ -21,6 +21,8 @@
 
 \title{6.867 Machine Learning  \subtitle{Homework 1} }
 
+\maketitle
+
 % **************************************************************************************************
  % Problem 1
 % **************************************************************************************************
@@ -31,10 +33,10 @@
 
 \subsection{Basic Gradient Descent}
 
-\noindent To demonstrate the gradient descent algorithm, we will begin by finding the minimum of two well defined functions with closed form derivatives shown below.
+\noindent To demonstrate the gradient descent algorithm, we began by finding the minimum of two well defined functions with closed form derivatives shown below.
 
 \medskip
-\noindent Negative Gaussian
+\noindent Negative Gaussian:
 \begin{equation}
 f(x) = - \frac{1}{\sqrt{(2\pi)^n |\Sigma|}} exp[-\frac{1}{2} (x-u)^T\Sigma^{-1}(x-u)]
 \end{equation}
@@ -42,24 +44,43 @@ f(x) = - \frac{1}{\sqrt{(2\pi)^n |\Sigma|}} exp[-\frac{1}{2} (x-u)^T\Sigma^{-1}(
 \frac{\partial f(x)}{\partial x} = -f(x) \Sigma^{-1} (x-u)
 \end{equation}
 
-
-\noindent Quadratic Bowl
+\noindent Quadratic Bowl:
 \begin{equation}
 f(x) = \frac{1}{2} x^T A x - x^T b
 \end{equation}
 \begin{equation}
 \frac{\partial f(x)}{\partial x} = Ax - b
 \end{equation}
-How does starting guess affect things?
 
-Graphs of step size vs gradient norm over time.
-Both gaussian and quad bowl.
+How did we do?
 
-Convergence criterion affects accuracy of result.
+The gradient descent algorithm takes three additional parameters, the starting guess, step size, and convergence criterion. Each affects the end result of the algorithm. The starting guess is important because gradient descent iteratively follows the gradient. Thus it can get stuck in local minimum. By running the algorithm repeated with random initialization, we increase our chance of finding a global minimum. The step size affects convergence behavior of the algorithm. As depicted in figure 1, if the step size is too small, the algorithm will converge slowly. If the step size is too big, the algorithm will overshoot the minimum and oscillate, converging more slowly. If the step size is much too big, the algorithm will actually diverge. This is depicted in figure 1 where for different step sizes, the norm of the gradients are plotted over time. The convergence criterion determines for how little change in cost function is it okay to stop. Decreasing this gives greater accuracy but increase runtime.
 
-\subsection{Central Difference Approximation for Gradient}
+Include Graphs at the end!!
+
+\subsection{Central Difference Approximation}
+
+For many objective functions, it is impossible to write a closed form gradient function. Thus, use central difference approxiation to approximate the gradient. For each dimension $i$, estimate its partial derivative by 
+\begin{equation}
+\bigtriangledown_i f(x) = \frac{f(x+d*\hat{\i}) - f(x-d*\hat{\i})}{2d}
+\end{equation}
+for some small $d$. The larger $d$ is, the more inaccurate the gradient approximation is. We will use $d = 10^{-3}$.
 
 \subsection{Batch vs. Stochastic Gradient Descent}
+Now use gradient descent to find parameters $\theta$ that minimizes the least squared error objective function
+\begin{equation}
+J(\theta) = ||X\theta - y||^2
+\end{equation}
+where each row of $X$ and $y$ is a data sample pair. 
+
+In batch gradient descent, $\theta$ is updated with the gradient of the cost function for the entire training dataset.
+How quickly did we converge and what did we converge to? 
+
+In contrast, stochastic gradient descent updates $\theta$ with the gradient of the cost function for each data point. $\theta$ is updated according to 
+\begin{equation}
+\theta_{t+1} = \theta_t - \eta_t \bigtriangledown_\theta J(\theta_t; x^{(i)}, y^{(i)}).
+\end{equation}
+ We iterate through the entire dataset $n$ times  We converge when the cost between iterations 
 
 
 % **************************************************************************************************
