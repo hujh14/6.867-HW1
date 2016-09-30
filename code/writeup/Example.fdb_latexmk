@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1475182535 "Example.tex" "Example.pdf" "Example" 1475182536
+["pdflatex"] 1475196645 "Example.tex" "Example.pdf" "Example" 1475196646
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -86,12 +86,12 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "Example.aux" 1475182536 8 a94a2480d3289e625eea47cd1b285758 ""
-  "Example.tex" 1475182535 5816 f47ae216ebed2ce4936c5e017a6385f5 ""
+  "Example.aux" 1475196646 8 a94a2480d3289e625eea47cd1b285758 ""
+  "Example.tex" 1475196644 6341 cca6137b01090b1ced2edbf5aebedc16 ""
   "SCITEPRESS.sty" 1412953120 5347 f2e6cd7895d07edd81a1c2f34530ebef ""
   "apalike.sty" 1412953120 1152 7e0216a1c626932f944fefc448e30fd5 ""
   "article.cls" 1475175061 19941 2ceda103c90826221636cd93dbb0953e ""
   (generated)
-  "Example.aux"
   "Example.log"
   "Example.pdf"
+  "Example.aux"

@@ -135,9 +135,20 @@ Shtuff.
  % Problem 4
 % **************************************************************************************************
 
-\section{\uppercase{Sparsity and LASSO}}
+\section{\uppercase{LASSO Regression}}
+In some applications, we have reason to believe the underlying function generating the data has sparse weights. In that case, using the $l_1$ norm for regularization, LASSO regression, can perform better than using the $l_2$ norm in ridge regression. To demonstrate this, we have a dataset generated according to 
+\begin{equation}
+y = w_{true}^T \phi (x) + \epsilon
+\end{equation}
+$\episolon$ is some error and $\phi (x)$ is a basis vector defined as 
+\begin{equation}
+\phi(x) = (x, \sin(0.4 \pi x * 1), ..., \sin(0.4 \pi x * 12))
+\end{equation}
 
-\subsection{Lasso}
+$w_{true}^T$ is a vector with sparse weights. We will try to guess them from training data by perform batch gradient descent to minimize the following objective function for LASSO:
+\begin{equation}
+
+\end{equation}
 
 
 
