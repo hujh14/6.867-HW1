@@ -122,7 +122,7 @@ J(\theta_t; x^{(i)}, y^{(i)}) = (x^{(i)T} \theta_t - y^{(i)})^2
 
 \section{\uppercase{Linear Basis Function Regression}}
 
-You can write stuff here to but don't have to. In the supervised learning problem of regression, we are given a set of n Data points and n target values and the goal is to find a function that relates x to y. We have to do this in such a way that this function generalizes well to unseen values of x. Linear Basis Function Regression aims to find the optimal linear combination of basis functions to create a function mapping x to y. This linear combination is These basis functions take the form phi(x). T To test our implementation, we generated 11 data points from the function y(x) = cos(pi*x)+1.5cos(2*pi*x) with some added noise. 
+In the supervised learning problem of regression, we are given a set of n Data points and n target values and the goal is to find a function that relates x to y. We have to do this in such a way that this function generalizes well to unseen values of x. Linear Basis Function Regression aims to find the optimal linear combination of basis functions to create a function mapping x to y. This linear combination is expressed as a vector of weights for each of these basis functions. These basis functions take the form phi(x). We evaluated different methods of finding the optimal weight vector, w. To do this, we generated 11 points y(x) = cos(pi*x)+1.5cos(2*pi*x) with some added noise. 
 
 \subsection{Closed Form Solution}
 
