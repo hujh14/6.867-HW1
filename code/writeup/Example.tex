@@ -74,13 +74,29 @@ J(\theta) = ||X\theta - y||^2
 where each row of $X$ and $y$ is a data sample pair. 
 
 In batch gradient descent, $\theta$ is updated with the gradient of the cost function for the entire training dataset.
+Use the gradient function
+\begin{equation}
+\bigtriangledown_\theta J(theta) = 2 (X\theta - y) * X
+\end{equation}
+That equation is probs wrong.
 How quickly did we converge and what did we converge to? 
 
 In contrast, stochastic gradient descent updates $\theta$ with the gradient of the cost function for each data point. $\theta$ is updated according to 
 \begin{equation}
-\theta_{t+1} = \theta_t - \eta_t \bigtriangledown_\theta J(\theta_t; x^{(i)}, y^{(i)}).
+\theta_{t+1} = \theta_t - \eta_t \bigtriangledown_\theta J(\theta_t; x^{(i)}, y^{(i)})
 \end{equation}
- We iterate through the entire dataset $n$ times  We converge when the cost between iterations 
+where $\eta$ is the learning rate and
+\begin{equation}
+J(\theta_t; x^{(i)}, y^{(i)}) = (x^{(i)T} \theta_t - y^{(i)})^2
+\end{equation}
+\begin{equation}
+\bigtriangledown_\theta J(\theta_t; x^{(i)}, y^{(i)}) = 2(x^{(i)T} \theta_t - y^{(i)}) x^{(i)}.
+\end{equation}
+
+ We iterate through the entire dataset for $n$ rounds and for each round, we iterate through the data points in a different order. We converge when the cost between rounds decreases by less than a certain threshold. 
+
+
+ Compare the behavior of the two algorithms!!!
 
 
 % **************************************************************************************************
