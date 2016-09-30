@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 SEP 2016 00:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 SEP 2016 01:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -297,6 +297,18 @@ LaTeX Warning: Label `fig:gradient_converging' multiply defined.
 
 LaTeX Warning: Label `fig:gradient_converging' multiply defined.
 
+
+LaTeX Warning: Label `fig:gradient_converging' multiply defined.
+
+
+LaTeX Warning: Label `fig:gradient_converging' multiply defined.
+
+
+LaTeX Warning: Label `fig:gradient_converging' multiply defined.
+
+
+LaTeX Warning: Label `fig:gradient_converging' multiply defined.
+
 )
 \openout1 = `Example.aux'.
 
@@ -488,10 +500,7 @@ e 74.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
@@ -509,27 +518,22 @@ LaTeX Warning: Command \i invalid in math mode on input line 85.
 
 LaTeX Warning: Command \i invalid in math mode on input line 85.
 
-<../Figures/P2/P2.1/M=1.png, id=20, 578.16pt x 433.62pt>
+[2 <../Figures/P1/gradient_diverging.png>]
+<../Figures/P2/P2.1/M=1.png, id=25, 578.16pt x 433.62pt>
 File: ../Figures/P2/P2.1/M=1.png Graphic file (type png)
 
 <use ../Figures/P2/P2.1/M=1.png>
 Package pdftex.def Info: ../Figures/P2/P2.1/M=1.png used on input line 142.
 (pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../Figures/P2/P2.1/M=3.png, id=21, 578.16pt x 433.62pt>
+<../Figures/P2/P2.1/M=3.png, id=26, 578.16pt x 433.62pt>
 File: ../Figures/P2/P2.1/M=3.png Graphic file (type png)
 
 <use ../Figures/P2/P2.1/M=3.png>
 Package pdftex.def Info: ../Figures/P2/P2.1/M=3.png used on input line 148.
 (pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../Figures/P2/P2.1/M=6.png, id=22, 578.16pt x 433.62pt>
+<../Figures/P2/P2.1/M=6.png, id=27, 578.16pt x 433.62pt>
 File: ../Figures/P2/P2.1/M=6.png Graphic file (type png)
 
 <use ../Figures/P2/P2.1/M=6.png>
@@ -539,7 +543,7 @@ Package pdftex.def Info: ../Figures/P2/P2.1/M=6.png used on input line 154.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Figures/P2/P2.1/M=8.png, id=23, 578.16pt x 433.62pt>
+<../Figures/P2/P2.1/M=8.png, id=28, 578.16pt x 433.62pt>
 File: ../Figures/P2/P2.1/M=8.png Graphic file (type png)
 
 <use ../Figures/P2/P2.1/M=8.png>
@@ -549,61 +553,105 @@ Package pdftex.def Info: ../Figures/P2/P2.1/M=8.png used on input line 160.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2 <../Figures/P1/gradient_diverging.png>] [3 <../Figures/P2/P2.1/M=1.png> <../
-Figures/P2/P2.1/M=3.png> <../Figures/P2/P2.1/M=6.png> <../Figures/P2/P2.1/M=8.p
-ng>]
-Underfull \hbox (badness 1132) in paragraph at lines 196--197
+[3 <../Figures/P2/P2.1/M=1.png> <../Figures/P2/P2.1/M=3.png> <../Figures/P2/P2.
+1/M=6.png> <../Figures/P2/P2.1/M=8.png>]
+<../Figures/P2/P2.3/cosine_graph.png, id=36, 578.16pt x 433.62pt>
+File: ../Figures/P2/P2.3/cosine_graph.png Graphic file (type png)
+
+<use ../Figures/P2/P2.3/cosine_graph.png>
+Package pdftex.def Info: ../Figures/P2/P2.3/cosine_graph.png used on input line
+ 191.
+(pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
+
+Underfull \hbox (badness 1132) in paragraph at lines 204--205
 []\OT1/ptm/m/n/10 Linear re-gres-sions, es-pe-cially those with sum
  []
 
-<../Figures/P4/lasso_varying.png, id=36, 578.16pt x 433.62pt>
+<../Figures/P3/M=7,L=small.png, id=37, 578.16pt x 433.62pt>
+File: ../Figures/P3/M=7,L=small.png Graphic file (type png)
+
+<use ../Figures/P3/M=7,L=small.png>
+Package pdftex.def Info: ../Figures/P3/M=7,L=small.png used on input line 217.
+(pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
+
+<../Figures/P3/medium_fit_better.png, id=38, 578.16pt x 433.62pt>
+File: ../Figures/P3/medium_fit_better.png Graphic file (type png)
+
+<use ../Figures/P3/medium_fit_better.png>
+Package pdftex.def Info: ../Figures/P3/medium_fit_better.png used on input line
+ 222.
+(pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../Figures/P3/Flat.png, id=39, 578.16pt x 433.62pt>
+File: ../Figures/P3/Flat.png Graphic file (type png)
+
+<use ../Figures/P3/Flat.png>
+Package pdftex.def Info: ../Figures/P3/Flat.png used on input line 227.
+(pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <../Figures/P2/P2.3/cosine_graph.png> <../Figures/P3/M=7,L=small.png>]
+<../Figures/P4/lasso_varying.png, id=45, 578.16pt x 433.62pt>
 File: ../Figures/P4/lasso_varying.png Graphic file (type png)
 
 <use ../Figures/P4/lasso_varying.png>
-Package pdftex.def Info: ../Figures/P4/lasso_varying.png used on input line 243
+Package pdftex.def Info: ../Figures/P4/lasso_varying.png used on input line 264
 .
 (pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
 
-Underfull \hbox (badness 1546) in paragraph at lines 244--244
-[]\OT1/ptm/m/n/9 Figure 8: |LASSO weight es-ti-mates from vary-ing $\OML/ptmcm/
-m/it/9 ^^U$\OT1/ptm/m/n/9 s
- []
-
-<../Figures/P4/lasso_best.png, id=37, 578.16pt x 433.62pt>
+<../Figures/P4/lasso_best.png, id=46, 578.16pt x 433.62pt>
 File: ../Figures/P4/lasso_best.png Graphic file (type png)
 
 <use ../Figures/P4/lasso_best.png>
-Package pdftex.def Info: ../Figures/P4/lasso_best.png used on input line 249.
+Package pdftex.def Info: ../Figures/P4/lasso_best.png used on input line 270.
 (pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
 
-<../Figures/P4/ridge_varying.png, id=38, 578.16pt x 433.62pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../Figures/P4/ridge_varying.png, id=47, 578.16pt x 433.62pt>
 File: ../Figures/P4/ridge_varying.png Graphic file (type png)
 
 <use ../Figures/P4/ridge_varying.png>
-Package pdftex.def Info: ../Figures/P4/ridge_varying.png used on input line 255
+Package pdftex.def Info: ../Figures/P4/ridge_varying.png used on input line 276
 .
 (pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
 
-<../Figures/P4/ridge_best.png, id=39, 578.16pt x 433.62pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../Figures/P4/ridge_best.png, id=48, 578.16pt x 433.62pt>
 File: ../Figures/P4/ridge_best.png Graphic file (type png)
 
 <use ../Figures/P4/ridge_best.png>
-Package pdftex.def Info: ../Figures/P4/ridge_best.png used on input line 261.
+Package pdftex.def Info: ../Figures/P4/ridge_best.png used on input line 282.
 (pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
- [4] [5 <../Figures/P4/lasso_varying.png> <../Figures/P4/lasso_best.png> <../Fi
-gures/P4/ridge_varying.png> <../Figures/P4/ridge_best.png>] (./Example.aux)
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <../Figures/P3/medium_fit_better.png> <../Figures/P3/Flat.png> <../Figures/P
+4/lasso_varying.png>] [6
+
+ <../Figures/P4/lasso_best.png> <../Figures/P4/ridge_varying.png> <../Figures/P
+4/ridge_best.png>] (./Example.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4219 strings out of 493089
- 62501 string characters out of 6134842
- 127361 words of memory out of 5000000
- 7594 multiletter control sequences out of 15000+600000
+ 4241 strings out of 493089
+ 63154 string characters out of 6134842
+ 126364 words of memory out of 5000000
+ 7610 multiletter control sequences out of 15000+600000
  44399 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,5n,38p,1232b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,5n,38p,1385b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -614,10 +662,10 @@ f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on Example.pdf (5 pages, 536238 bytes).
+Output written on Example.pdf (6 pages, 637642 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
