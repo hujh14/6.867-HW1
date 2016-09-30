@@ -52,11 +52,31 @@ f(x) = \frac{1}{2} x^T A x - x^T b
 \frac{\partial f(x)}{\partial x} = Ax - b
 \end{equation}
 
-How did we do?
+\noindent In each iteration, update $x$ according to 
+\begin{equation}
+x_{t+1} = x_{t} - \eta \bigtriangledown f(x)
+\end{equation}
+where $\eta$ is the step size. Use the gradient function above to directly compute the gradient at $x$.
 
-The gradient descent algorithm takes three additional parameters, the starting guess, step size, and convergence criterion. Each affects the end result of the algorithm. The starting guess is important because gradient descent iteratively follows the gradient. Thus it can get stuck in local minimum. By running the algorithm repeated with random initialization, we increase our chance of finding a global minimum. The step size affects convergence behavior of the algorithm. As depicted in figure 1, if the step size is too small, the algorithm will converge slowly. If the step size is too big, the algorithm will overshoot the minimum and oscillate, converging more slowly. If the step size is much too big, the algorithm will actually diverge. This is depicted in figure 1 where for different step sizes, the norm of the gradients are plotted over time. The convergence criterion determines for how little change in cost function is it okay to stop. Decreasing this gives greater accuracy but increase runtime.
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{../Figures/P1/gradient_converging.png}
+  \caption{Gradient descent on negative gaussian with step size $\eta = 10^7$. The norm of the gradient is converging to zero.}
+  \label{fig:gradient_converging}
+\end{figure}
 
-Include Graphs at the end!!
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{../Figures/P1/gradient_oscillating.png}
+  \caption{Gradient descent on negative gaussian with step size $\eta = 10^7$. The norm of the gradient is oscillating and never converging.}
+  \label{fig:gradient_oscillating}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{../Figures/P1/gradient_diverging.png}
+  \caption{Gradient descent on negative gaussian with step size $\eta = 10^7$. The norm of the gradient is diverging.}
+  \label{fig:gradient_converging}
+\end{figure}
+
+The gradient descent algorithm also takes three structural parameters, the starting guess, step size, and convergence criterion. Each affects the end result of the algorithm. The starting guess is important because gradient descent iteratively follows the gradient. Thus it can get stuck in local minimum. By running the algorithm repeated with random initialization, we increase our chance of finding a global minimum. The step size affects convergence behavior of the algorithm. As shown in figures 1-3, if the step size is too small, the algorithm will converge slowly. If the step size is slightly too big, the algorithm will oscillate. If the step size is much too big, the algorithm will actually diverge. The convergence criterion determines for how little change in cost function is it okay to stop. Decreasing this gives greater accuracy but increases runtime.
 
 \subsection{Central Difference Approximation}
 
@@ -67,7 +87,7 @@ For many objective functions, it is impossible to write a closed form gradient f
 for some small $d$. The larger $d$ is, the more inaccurate the gradient approximation is. We will use $d = 10^{-3}$.
 
 \subsection{Batch vs. Stochastic Gradient Descent}
-Now use gradient descent to find parameters $\theta$ that minimizes the least squared error objective function
+Now we will use gradient descent to find parameters $\theta$ that minimizes the least squared error objective function
 \begin{equation}
 J(\theta) = ||X\theta - y||^2
 \end{equation}
@@ -76,10 +96,10 @@ where each row of $X$ and $y$ is a data sample pair.
 In batch gradient descent, $\theta$ is updated with the gradient of the cost function for the entire training dataset.
 Use the gradient function
 \begin{equation}
-\bigtriangledown_\theta J(theta) = 2 (X\theta - y) * X
+\bigtriangledown_\theta J(\theta) = 2X(X\theta - y)
 \end{equation}
-That equation is probs wrong.
-How quickly did we converge and what did we converge to? 
+
+Using a step size of $0.01$ and a convergence criterion of $10^-8$, the quadratic bowl function converges in $179$ iterations. The dataset had $100$ points so it took $17900$ point wise gradient evaluations.
 
 In contrast, stochastic gradient descent updates $\theta$ with the gradient of the cost function for each data point. $\theta$ is updated according to 
 \begin{equation}
@@ -93,10 +113,7 @@ J(\theta_t; x^{(i)}, y^{(i)}) = (x^{(i)T} \theta_t - y^{(i)})^2
 \bigtriangledown_\theta J(\theta_t; x^{(i)}, y^{(i)}) = 2(x^{(i)T} \theta_t - y^{(i)}) x^{(i)}.
 \end{equation}
 
- We iterate through the entire dataset for $n$ rounds and for each round, we iterate through the data points in a different order. We converge when the cost between rounds decreases by less than a certain threshold. 
-
-
- Compare the behavior of the two algorithms!!!
+ We iterate through the entire dataset for $n$ rounds and for each round, we iterate through the data points in a different order. We converge when the cost between rounds decreases by less than a certain threshold. The stochastic gradient descent took $200000$ pointwise gradient evaluations. The batch gradient descent performed much faster to achieve the same level of convergence but in practice, it is infeasible to compute gradients on large datasets. For such datasets, stochastic gradient descent is the only option.
 
 
 % **************************************************************************************************
@@ -119,7 +136,7 @@ Write functions to compute SSE and derivative. TODO LATER
 
 \subsection{Batch vs Stochastic Gradient Descent}
 
-We tested different combinations of convergence criterion, step size, initial guess, and M. We found that with batch gradient descent, a step size of 0.1 achieved the best results. The algorithm achieved lower costs on the cost function and required less iterations than smaller step sizes. Values lower than that would cause the algorithm to converge to a suboptimal value, and values higher than that caused the algorithm to oscillate and fail. We believe that this is because the loss function is less sensitive to changes, allowing for larger step sizes without oscillation. Additionally, we believe that this insensitivy to changes makes it easy for the function to have nearly identical values on successive iterations when the step size is small, causing the algorithm to converge to suboptimal weights. Lower convergence criterion led to better results, but came with the tradeoff of longer convergence times. For example, with M=4 and a step size of .01, lowering the convergence criterion from 10^-6 to 10^-7 quintupled the number of iterations needed and improved the cost by .02. We initialized our parameter vector at random and it didn't affect the converged values of the algorithm. 
+We tested different combinations of convergence criterion, step size, initial guess, and M. We found that with batch gradient descent, a step size of $0.1$ achieved the best results. The algorithm achieved lower costs on the cost function and required less iterations than smaller step sizes. Values lower than that would cause the algorithm to converge to a suboptimal value, and values higher than that caused the algorithm to oscillate and fail. We believe that this is because the loss function is less sensitive to changes, allowing for larger step sizes without oscillation. Additionally, we believe that this insensitivy to changes makes it easy for the function to have nearly identical values on successive iterations when the step size is small, causing the algorithm to converge to suboptimal weights. Lower convergence criterion led to better results, but came with the tradeoff of longer convergence times. For example, with $M=4$ and a step size of $.01$, lowering the convergence criterion from $10^{-6}$ to $10^{-7}$ quintupled the number of iterations needed and improved the cost by $.02$. We initialized our parameter vector at random and it didn't affect the converged values of the algorithm. 
 
 With Stochastic Gradient Descent, we found similar trends. Lowering the convergence criterion led to lower costs but more iterations. Increasing the step size (with a max value of 1) generally led to lower costs. A step size of 1 would sometimes give the best results, but other times it caused the algorithm to oscillate and fail. We initialized our parameter vector at random several times and it didn't affect the converged values of the algorithm. 
 
@@ -155,17 +172,56 @@ In some applications, we have reason to believe the underlying function generati
 \begin{equation}
 y = w_{true}^T \phi (x) + \epsilon
 \end{equation}
-$\episolon$ is some error and $\phi (x)$ is a basis vector defined as 
+$\epsilon$ is some error and $\phi (x)$ is a basis vector defined as 
 \begin{equation}
 \phi(x) = (x, \sin(0.4 \pi x * 1), ..., \sin(0.4 \pi x * 12))
 \end{equation}
 
-$w_{true}^T$ is a vector with sparse weights. We will try to guess them from training data by perform batch gradient descent to minimize the following objective function for LASSO:
+$w_{true}^T$ is a vector with sparse weights. We will try to guess them from the training data by perform batch gradient descent to minimize the following objective function for LASSO:
 \begin{equation}
-
+\frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - w^T \phi(x^{(i)}))^2 + \lambda \sum_{j=1}^{M} |w_j|
 \end{equation}
+Different values of $\lambda$ give different weight estimates. The larger $\lambda$ is, the more sparse the weight estimates will be. Unsurprisingly, when $\lambda$ is extremely large, the weights are all zero. These weight estimates can then be plotted by $y = w_{est}^T \phi (x)$ to see how well they performed against the training data. As you can see in figure ?, the lower $\lambda$ is, the more closely the function matches the training data.
 
 
+Then, from all possible $\lambda, w_{est}$ pairs, we used to validation dataset to choose the pair that performed best. The best $\lambda$ was $10^{-2.55}$ and it yielded an average squared error from the test dataset of $0.0484489$. It is depicted in figure ?.
+
+
+Using a same procedure with ridge regression, we minimize the objective function
+\begin{equation}
+\frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - w^T \phi(x^{(i)}))^2 + \lambda \sum_{j=1}^{M} (w_j)^2
+\end{equation}
+generate weight estimates, and plot them against the sample data. In figure ?, we see weight estimates from different lambdas plotted against the training data.
+
+
+Figure ? plots the best ridge regression as selected from the validation data set. It is clear the ridge regression performs much worse than LASSO. In fact, the average squared error is $0.635523$, 50\% more than LASSO. LASSO was much better at guessing the sparse true weights.
+
+
+
+
+\begin{figure}[b!]
+  \includegraphics[width=\linewidth]{../Figures/P4/lasso_varying.png}
+  \caption{LASSO weight estimates from varying $\lambda$s graphed against training data.}
+  \label{fig:lasso_varying}
+\end{figure}
+
+\begin{figure}[b!]
+  \includegraphics[width=\linewidth]{../Figures/P4/lasso_best.png}
+  \caption{Best LASSO weight estimate.}
+  \label{fig:lasso_best}
+\end{figure}
+
+\begin{figure}[b!]
+  \includegraphics[width=\linewidth]{../Figures/P4/ridge_varying.png}
+  \caption{Ridge regression weight estimates from varying $\lambda$s graphed against training data.}
+  \label{fig:ridge_varying}
+\end{figure}
+
+\begin{figure}[b!]
+  \includegraphics[width=\linewidth]{../Figures/P4/ridge_best.png}
+  \caption{Best ridge regression weight estimate.}
+  \label{fig:ridge_best}
+\end{figure}
 
 \vfill
 \end{document}
