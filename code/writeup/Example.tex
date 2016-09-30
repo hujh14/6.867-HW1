@@ -89,19 +89,30 @@ In contrast, stochastic gradient descent updates $\theta$ with the gradient of t
 
 \section{\uppercase{Linear Basis Function Regression}}
 
-You can write stuff here to but don't have to.
+You can write stuff here to but don't have to. In the supervised learning problem of regression, we are given a set of n Data points and n target values and the goal is to find a function that relates x to y. We have to do this in such a way that this function generalizes well to unseen values of x. Linear Basis Function Regression aims to find the optimal linear combination of basis functions to create a function mapping x to y. These basis functions take the form phi(x). To test our implementation, we generated 11 data points from the function y(x) = cos(pi*x)+1.5cos(2*pi*x) with some added noise. 
 
 \subsection{Closed Form Solution}
 
+From the textbook, we know the closed form solution for the maximum likelihood wieght vector given data values X, target values Y, and the value of M, where M is the highest order polynomial in our polynomial basis. The closed form solution for the maximum likelihood weight vector is (phi.T dot phi)**-1 dot phi.T dot Y. 
+
 \subsection{Gradient Descent Objective Functions}
 
-Write functions to compute SSE and derivative.
+The objective function we were trying to minimize was Sum Squared Error. The function and its derivative are: . We then used our gradient descent algorithms to find the weight vector that minimized the Sum Squared error. 
+
+Write functions to compute SSE and derivative. TODO LATER
 
 \subsection{Batch vs Stochastic Gradient Descent}
 
+We tested different combinations of convergence criterion, step size, initial guess, and M. We found that with batch gradient descent, a step size of 0.1 achieved the best results. The algorithm achieved lower costs on the cost function and required less iterations than smaller step sizes. Values lower than that would cause the algorithm to converge to a suboptimal value, and values higher than that caused the algorithm to oscillate and fail. We believe that this is because the loss function is less sensitive to changes, allowing for larger step sizes without oscillation. Additionally, we believe that this insensitivy to changes makes it easy for the function to have nearly identical values on successive iterations when the step size is small, causing the algorithm to converge to suboptimal weights. Lower convergence criterion led to better results, but came with the tradeoff of longer convergence times. For example, with M=4 and a step size of .01, lowering the convergence criterion from 10^-6 to 10^-7 quintupled the number of iterations needed and improved the cost by .02. We initialized our parameter vector at random and it didn't affect the converged values of the algorithm. 
+
+With Stochastic Gradient Descent, we found similar trends. Lowering the convergence criterion led to lower costs but more iterations. Increasing the step size (with a max value of 1) generally led to lower costs. A step size of 1 would sometimes give the best results, but other times it caused the algorithm to oscillate and fail. We initialized our parameter vector at random several times and it didn't affect the converged values of the algorithm. 
+
+Batch gradient descent achieved better results, yielding lower costs in nearly every configuration we tested. However, it took a significant number of more iterations than stochastic gradient descent. It often needed more than 10 times the number of iterations. 
 Compare!
 
 \subsection{Cosine Basis Functions}
+
+We then tested our function for computing the maximum likelihood weight vector by using our prior knowledge about the origin of the data. We used cosine basis functions instead of polynomial ones. The real values of the function that generated the data are cos(pi*x)+1.5cos(2*pi*x), which means its weight vector would be [1, 1.5]. Our calculations yielded [0.7789928, 1.17413213]. 
 
 Shtuff.
 
@@ -111,7 +122,11 @@ Shtuff.
 
 \section{\uppercase{Ridge Regression}}
 
+Linear regressions, especially those with sum squared error cost functions, are prone to highly overfit the data. One way to ameliorate this is to introduce a regularization term on your weight vector. Ridge regression punishes weight vectors with large sizes. The parameter lambda controls how much the size of a vector is penalized. 
+
 \subsection{Closed Form Solution}
+
+We tested different values of lambda on ridge regressions on a small data set. The tested values of lamda ranging from 1000 to .00001. With 
 
 \subsection{Results?}
 
