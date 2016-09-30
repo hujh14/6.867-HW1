@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 SEP 2016 23:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 SEP 2016 23:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -506,11 +506,11 @@ Underfull \hbox (badness 1132) in paragraph at lines 158--159
 File: ../Figures/P4/lasso_varying.png Graphic file (type png)
 
 <use ../Figures/P4/lasso_varying.png>
-Package pdftex.def Info: ../Figures/P4/lasso_varying.png used on input line 203
+Package pdftex.def Info: ../Figures/P4/lasso_varying.png used on input line 205
 .
 (pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
 
-Underfull \hbox (badness 1546) in paragraph at lines 204--204
+Underfull \hbox (badness 1546) in paragraph at lines 206--206
 []\OT1/ptm/m/n/9 Figure 4: |LASSO weight es-ti-mates from vary-ing $\OML/ptmcm/
 m/it/9 ^^U$\OT1/ptm/m/n/9 s
  []
@@ -519,14 +519,14 @@ m/it/9 ^^U$\OT1/ptm/m/n/9 s
 File: ../Figures/P4/lasso_best.png Graphic file (type png)
 
 <use ../Figures/P4/lasso_best.png>
-Package pdftex.def Info: ../Figures/P4/lasso_best.png used on input line 209.
+Package pdftex.def Info: ../Figures/P4/lasso_best.png used on input line 211.
 (pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
 
 <../Figures/P4/ridge_varying.png, id=30, 578.16pt x 433.62pt>
 File: ../Figures/P4/ridge_varying.png Graphic file (type png)
 
 <use ../Figures/P4/ridge_varying.png>
-Package pdftex.def Info: ../Figures/P4/ridge_varying.png used on input line 215
+Package pdftex.def Info: ../Figures/P4/ridge_varying.png used on input line 217
 .
 (pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
 
@@ -534,7 +534,7 @@ Package pdftex.def Info: ../Figures/P4/ridge_varying.png used on input line 215
 File: ../Figures/P4/ridge_best.png Graphic file (type png)
 
 <use ../Figures/P4/ridge_best.png>
-Package pdftex.def Info: ../Figures/P4/ridge_best.png used on input line 221.
+Package pdftex.def Info: ../Figures/P4/ridge_best.png used on input line 223.
 (pdftex.def)             Requested size: 213.41443pt x 160.05974pt.
  [4 <../Figures/P4/lasso_varying.png> <../Figures/P4/lasso_best.png> <../Figure
 s/P4/ridge_varying.png> <../Figures/P4/ridge_best.png>] (./Example.aux)
@@ -560,7 +560,7 @@ f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on Example.pdf (4 pages, 442466 bytes).
+Output written on Example.pdf (4 pages, 443087 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream

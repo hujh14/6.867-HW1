@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1475206492 "Example.tex" "Example.pdf" "Example" 1475206495
+["pdflatex"] 1475206936 "Example.tex" "Example.pdf" "Example" 1475206938
   "../Figures/P1/gradient_converging.png" 1475203876 23820 d1c6efb3fc6cb71da307300bb3f86c93 ""
   "../Figures/P1/gradient_diverging.png" 1475204160 20537 e93527100eac54c1788c3341e5817abf ""
   "../Figures/P1/gradient_oscillating.png" 1475203797 66705 6949e4bfff852d90cbed5b4279e3bb9d ""
@@ -95,12 +95,12 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "Example.aux" 1475206494 344 b4903d34107687f290dfc261ad3b8a90 ""
-  "Example.tex" 1475206492 13966 d4d5c4a97aab756c63fbaf002f7b7e50 ""
+  "Example.aux" 1475206938 344 b4903d34107687f290dfc261ad3b8a90 ""
+  "Example.tex" 1475206935 14807 be1deca0131d34e369a844eea7d476a4 ""
   "SCITEPRESS.sty" 1412953120 5347 f2e6cd7895d07edd81a1c2f34530ebef ""
   "apalike.sty" 1412953120 1152 7e0216a1c626932f944fefc448e30fd5 ""
   "article.cls" 1475175061 19941 2ceda103c90826221636cd93dbb0953e ""
   (generated)
-  "Example.pdf"
   "Example.log"
   "Example.aux"
+  "Example.pdf"
