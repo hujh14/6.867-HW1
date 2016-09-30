@@ -1,19 +1,31 @@
 import numpy as np
 import math
+import matplotlib.pyplot as plt
 
 import loadParametersP1
 
 def gradient_descent(obj_func, gradient_func, init, step_size, threshold):
     theta = init
     gradient = gradient_func(init)
+    gradient_norms = []
     print theta, gradient
+    counter = 0
     while np.linalg.norm(gradient) > threshold:
-        print theta, gradient
+        counter += 1
+        print counter
+        gradient_norms += [np.linalg.norm(gradient)]
+        print np.linalg.norm(gradient)
         gradient = gradient_func(theta)
         theta += -1 * step_size * gradient
     print "Minimum at", theta
     print "Value is", obj_func(theta)
-    return theta, obj_func(theta)
+
+
+    plt.figure(1)
+    plt.title("Gradient Diverging")
+
+    plt.plot(gradient_norms)
+    plt.show()
 
 def quad_bowl_factory(A, b):
     def quad_bowl(x):
@@ -43,17 +55,17 @@ if __name__ == "__main__":
     (gaussMean,gaussCov,quadBowlA,quadBowlb) = loadParametersP1.getData()
 
 
-    # obj_func = quad_bowl_factory(quadBowlA, quadBowlb)
-    # gradient_func = quad_bowl_gradient_factory(quadBowlA, quadBowlb)
-    # init = np.zeros(2)
-    # step_size = 10**-2
-    # threshold = 10**-5
-    # print gradient_descent(obj_func, gradient_func, init, step_size, threshold)
-
-    obj_func = neg_gauss_factory(gaussMean, gaussCov)
-    gradient_func = neg_gauss_gradient_factory(gaussMean, gaussCov)
-
+    obj_func = quad_bowl_factory(quadBowlA, quadBowlb)
+    gradient_func = quad_bowl_gradient_factory(quadBowlA, quadBowlb)
     init = np.zeros(2)
-    step_size = 10**7
-    threshold = 10**-10
+    step_size = 0.15*10**0
+    threshold = 10**-5
     print gradient_descent(obj_func, gradient_func, init, step_size, threshold)
+
+    # obj_func = neg_gauss_factory(gaussMean, gaussCov)
+    # gradient_func = neg_gauss_gradient_factory(gaussMean, gaussCov)
+
+    # init = np.zeros(2)
+    # step_size = 10**8
+    # threshold = 10**-10
+    # print gradient_descent(obj_func, gradient_func, init, step_size, threshold)
