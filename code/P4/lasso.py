@@ -25,8 +25,9 @@ def obj_func_factory(X,Y,l):
 
 def phi(x):
     v = np.zeros(13)
-    for i in xrange(13):
-        v[i] = x*math.sin(0.4*math.pi*x*i)
+    v[0] = x
+    for i in xrange(1,13):
+        v[i] = math.sin(0.4*math.pi*x*i)
     return v
 
 def gradient_approx(f, w, D):
@@ -60,7 +61,7 @@ def gradient_descent(obj_func, init, step_size, threshold):
     print "Cost is", new_cost
 
 X,Y = lassoData.lassoTrainData()
-l = 10**0
+l = 10**-1
 obj_func = obj_func_factory(X,Y,l)
 init = np.zeros(13)
 step_size = 10**-2
