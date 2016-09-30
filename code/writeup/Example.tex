@@ -122,7 +122,7 @@ J(\theta_t; x^{(i)}, y^{(i)}) = (x^{(i)T} \theta_t - y^{(i)})^2
 
 \section{\uppercase{Linear Basis Function Regression}}
 
-You can write stuff here to but don't have to. In the supervised learning problem of regression, we are given a set of n Data points and n target values and the goal is to find a function that relates x to y. We have to do this in such a way that this function generalizes well to unseen values of x. Linear Basis Function Regression aims to find the optimal linear combination of basis functions to create a function mapping x to y. These basis functions take the form phi(x). To test our implementation, we generated 11 data points from the function y(x) = cos(pi*x)+1.5cos(2*pi*x) with some added noise. 
+You can write stuff here to but don't have to. In the supervised learning problem of regression, we are given a set of n Data points and n target values and the goal is to find a function that relates x to y. We have to do this in such a way that this function generalizes well to unseen values of x. Linear Basis Function Regression aims to find the optimal linear combination of basis functions to create a function mapping x to y. This linear combination is These basis functions take the form phi(x). T To test our implementation, we generated 11 data points from the function y(x) = cos(pi*x)+1.5cos(2*pi*x) with some added noise. 
 
 \subsection{Closed Form Solution}
 
@@ -159,9 +159,11 @@ Linear regressions, especially those with sum squared error cost functions, are 
 
 \subsection{Closed Form Solution}
 
-We tested different values of lambda on ridge regressions on a small data set. The tested values of lamda ranging from 1000 to .00001. With 
+We tested different values of lambda on ridge regressions on a small data set. The tested values of lamda ranging from 1000 to .00001. With very large lamdba values, the weight vector became the zero vector. In general, as lambda got smaller, the best fit line produced by the regression was able to fit the data better. This is because when lambda = 0, then it is a normal regression problem with a least squares solution. Lambda effectively works as a bias term, the larger it is, the lower the variance of the weight vector. 
 
 \subsection{Results?}
+
+We decided to evaluate the effect lambda and M have on unseen data. To evaluate this, we trained several models on a training set, A, and then used a validation set to determine what models performed the best. We then calculated the error that each of these selected models had on an unseen test set. The models that performed the best on the test set had very low lambda values (between .000001 and .0001) and had M = 6. 
 
 % **************************************************************************************************
  % Problem 4
